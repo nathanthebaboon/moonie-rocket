@@ -6,7 +6,7 @@
     },
     {
       "source": "/tools/buythedip/:path*",
-      "destination": "https://moonie-tool-buythedip-production-875a.up.railway.app//:path*"
+      "destination": "https://moonie-tool-buythedip-production-875a.up.railway.app/:path*"
     }
   ]
 }
