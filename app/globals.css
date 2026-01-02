@@ -403,6 +403,7 @@ a:hover {
   .poster-line {
     font-size: clamp(1.8rem, 9vw, 2.5rem);
     line-height: 1.7;
+    letter-spacing: -0.035em;
   }
 }
 
