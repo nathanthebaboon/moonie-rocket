@@ -104,7 +104,7 @@ a:hover {
 ---------------------------------- */
 .section {
   width: 100%;
-  padding: 1rem 1.5rem 4rem;
+  padding: 0.2rem 1.5rem 4rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -402,7 +402,7 @@ a:hover {
 @media (max-width: 640px) {
   .poster-line {
     font-size: clamp(1.8rem, 9vw, 2.5rem);
-    line-height: 1.5;
+    line-height: 1.7;
   }
 }
 
