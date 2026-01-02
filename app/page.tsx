@@ -30,8 +30,8 @@ export default function HomePage() {
         align="right"
         imageClass="img-apes-moon"
         titleLines={[
-          "Combine Smart Money Tools",
-          "with your hodl-ing",
+          "Use Smart Money Tools",
+          "before hodl-ing",
         ]}
         image={
           <Image
