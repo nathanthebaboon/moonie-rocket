@@ -43,7 +43,7 @@ export default function RootLayout({
                 rel="noopener noreferrer"
                 className="header-cta"
               >
-                Try Our <br/> Beta Version
+                Be a <br/> Tester
               </a>
             </nav>
 

@@ -134,7 +134,7 @@ export default function HomePage() {
         />
 
         <p className="cta-title">
-          Launching mid-2026
+          Coming Soon
         </p>
 
         <a
@@ -143,7 +143,7 @@ export default function HomePage() {
           rel="noopener noreferrer"
           className="cta-button"
         >
-          Try our <br/> Beta Version
+          Be a <br/> Tester
         </a>
       </section>
     </main>
