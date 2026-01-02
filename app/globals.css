@@ -104,7 +104,7 @@ a:hover {
 ---------------------------------- */
 .section {
   width: 100%;
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem 4rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -130,23 +130,28 @@ a:hover {
   }
 }
 
-/* image wrappers */
-.section-image {
-  width: 100%;
-}
-
 .section-image img {
   width: 100%;
+  display: block;
   height: auto;
   object-fit: contain;
 }
 
+/* MOBILE */
 @media (max-width: 640px) {
-  .section-image,
+  .section-image {
+    display: flex;
+    justify-content: center;
+  }
+
   .section-image img {
-    max-width: 90vw;
-    width: 100%;
-    height: auto;
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+
+  /* specific image override */
+  .img-rocket {
+    max-width: 40vw;
   }
 }
 
@@ -396,8 +401,8 @@ a:hover {
 /* MOBILE: scale poster lines down to fit */
 @media (max-width: 640px) {
   .poster-line {
-    font-size: clamp(1.4rem, 6vw, 2.2rem);
-    line-height: 1;
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+    line-height: 1.5;
   }
 }
 
