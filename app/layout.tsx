@@ -38,7 +38,7 @@ export default function RootLayout({
             {/* CTA BUTTON */}
             <nav className="nav">
               <a
-                href="https://t.me/your_channel"
+                href="https://t.me/moonierocket"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="header-cta"

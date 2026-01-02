@@ -138,7 +138,7 @@ export default function HomePage() {
         </p>
 
         <a
-          href="https://t.me/your_moonie_rocket_channel"
+          href="https://t.me/moonierocket"
           target="_blank"
           rel="noopener noreferrer"
           className="cta-button"
