@@ -90,7 +90,7 @@ export default function HomePage() {
 
         titleLines={[
           "Optimise your",
-          "diamond hands portfolio",
+          "diamond hands holdings",
         ]}
         image={
           <Image
