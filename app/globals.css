@@ -141,6 +141,15 @@ a:hover {
   object-fit: contain;
 }
 
+@media (max-width: 640px) {
+  .section-image,
+  .section-image img {
+    max-width: 90vw;
+    width: 100%;
+    height: auto;
+  }
+}
+
 /* ----------------------------------
    PER-IMAGE SIZES
 ---------------------------------- */
@@ -254,6 +263,19 @@ a:hover {
   letter-spacing: -0.05em;
   color: #0f184a;
   text-transform: uppercase;
+}
+
+/* MOBILE: logo + brand size */
+@media (max-width: 640px) {
+  .logo {
+    height: 36px;
+    width: auto;
+  }
+
+  .brand {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    line-height: 1.1;
+  }
 }
 
 .nav {
@@ -371,6 +393,14 @@ a:hover {
   .poster-line { font-size: 3.6rem; }
 }
 
+/* MOBILE: scale poster lines down to fit */
+@media (max-width: 640px) {
+  .poster-line {
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
+    line-height: 1;
+  }
+}
+
 .poster-line-white { color: #ffffff; }
 .poster-line-gold { color: #e6b44c; }
 
@@ -399,6 +429,14 @@ a:hover {
 
 @media (min-width: 600px) {
   .cta-title { font-size: 2rem; }
+}
+
+/* MOBILE: scale CTA title down to fit */
+@media (max-width: 640px) {
+  .cta-title {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    line-height: 1;
+  }
 }
 
 .cta-button {
