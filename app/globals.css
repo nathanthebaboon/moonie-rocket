@@ -29,6 +29,7 @@
 /* ----------------------------------
    RESET
 ---------------------------------- */
+
 * {
   box-sizing: border-box;
 }
@@ -40,6 +41,13 @@ body {
   min-height: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+/* 👇 Make the viewport the scroll snap container */
+html {
+  scroll-snap-type: y mandatory;
+  /* optional: adjust if your sticky header overlaps sections */
+  scroll-padding-top: 0;
 }
 
 /* ----------------------------------
@@ -123,6 +131,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
+  scroll-snap-stop: always;   
 }
 
 .section-inner {
@@ -442,10 +451,15 @@ a:hover {
 ---------------------------------- */
 .scroll-snap-container {
   min-height: 100vh;        /* allow page to be taller than viewport */
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 80px; /* adjust for sticky header height if needed */
 }
 
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;      /* each section fills the screen */
+  display: flex;
+  align-items: center;    /* optional, to vertically center content */
+}
 /* ----------------------------------
    CTA SECTION
 ---------------------------------- */
@@ -558,7 +572,7 @@ a:hover {
 .tools-section-title {
   font-size: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.035em;
   color: #ffb347;
   margin-bottom: 1rem;
 }
@@ -569,7 +583,7 @@ a:hover {
   font-size: 1.5rem;
   margin-top: -0.2rem;
   margin-bottom: 3rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0em;
   line-height: 1.2;
 }
 
@@ -577,14 +591,12 @@ a:hover {
 @media (max-width: 768px) {
   .tools-section-title {
     font-size: 1.8rem;
-    letter-spacing: -0.03em;
     margin-bottom: 0.75rem;
   }
 
   .tools-section-subtitle {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    line-height: 1.3;
   }
 }
 

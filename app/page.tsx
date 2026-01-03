@@ -5,7 +5,6 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <main className="scroll-snap-container bg-[#1a2043] text-[#ffe9a8]">
-
       {/* SECTION 1: FLY TO THE MOON */}
       <Section
         id="1"
@@ -29,10 +28,7 @@ export default function HomePage() {
         id="2"
         align="right"
         imageClass="img-apes-moon"
-        titleLines={[
-          "Use Smart Money Tools",
-          "before hodl-ing",
-        ]}
+        titleLines={["Use Smart Money Tools", "before hodl-ing"]}
         image={
           <Image
             src="/moonie/apes-moon.png"
@@ -66,11 +62,7 @@ export default function HomePage() {
         id="4"
         align="right"
         imageClass="img-candles"
-
-        titleLines={[
-          "See the future",
-          "before you buy the dip",
-        ]}
+        titleLines={["See the future", "before you buy the dip"]}
         image={
           <Image
             src="/moonie/candles.png"
@@ -87,11 +79,7 @@ export default function HomePage() {
         id="5"
         align="left"
         imageClass="img-diamond"
-
-        titleLines={[
-          "Optimise your",
-          "diamond hands holdings",
-        ]}
+        titleLines={["Optimise your", "diamond hands holdings"]}
         image={
           <Image
             src="/moonie/diamond.png"
@@ -108,10 +96,7 @@ export default function HomePage() {
         id="6"
         align="right"
         imageClass="img-banana-ape"
-        titleLines={[
-          "Hop onboard the",
-          "Moonie Rocket today!",
-        ]}
+        titleLines={["Hop onboard the", "Moonie Rocket today!"]}
         image={
           <Image
             src="/moonie/banana-ape.png"
@@ -133,9 +118,8 @@ export default function HomePage() {
           className="mb-6"
         />
 
-        <p className="cta-title">
-          Coming Soon
-        </p>
+        <p className="cta-title">Coming Soon</p>
+
         <div className="cta-row">
           <a
             href="https://moonierocket.com/tools"
@@ -143,7 +127,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="cta-button"
           >
-            Try It <br/> Now
+            Try It <br /> Now
           </a>
 
           <a
@@ -152,10 +136,9 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="cta-button"
           >
-            Join the <br/> Community
+            Join the <br /> Community
           </a>
         </div>
-
       </section>
     </main>
   );
@@ -185,15 +168,11 @@ function Section({
         {isLeft ? (
           <>
             <TitleBlock titleLines={titleLines} />
-            <div className={`section-image ${imageClass ?? ""}`}>
-              {image}
-            </div>
+            <div className={`section-image ${imageClass ?? ""}`}>{image}</div>
           </>
         ) : (
           <>
-            <div className={`section-image ${imageClass ?? ""}`}>
-              {image}
-            </div>
+            <div className={`section-image ${imageClass ?? ""}`}>{image}</div>
             <TitleBlock titleLines={titleLines} />
           </>
         )}
@@ -201,9 +180,6 @@ function Section({
     </section>
   );
 }
-
-
-
 
 function TitleBlock({ titleLines }: { titleLines: string[] }) {
   return (
