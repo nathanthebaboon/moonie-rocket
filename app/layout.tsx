@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import Link from "next/link";
 
 const bernoru = localFont({
-  src: "./fonts/bernoru.otf", // or "./fonts/bernoru.ttf"
+  src: "./fonts/bernoru.otf",
   display: "swap",
 });
 
@@ -20,38 +20,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={bernoru.className}>
       <body>
         <header className="site-header">
-          <div className="header-inner">
+          {/* hidden checkbox controls mobile menu */}
+          <input type="checkbox" id="nav-toggle" className="nav-toggle" />
 
-            {/* CLICKABLE LOGO + BRAND */}
-            <Link
-              href="https://www.moonierocket.com"
-              className="header-left"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/moonie/logo.png"
-                alt="Moonie Rocket"
-                className="logo"
-              />
+          <div className="header-inner">
+            {/* LOGO + BRAND */}
+            <Link href="/" className="header-left">
+              <img src="/moonie/logo.png" alt="Moonie Rocket" className="logo" />
               <span className="brand">
                 MOONIE <br /> ROCKET
               </span>
             </Link>
 
-            {/* CTA BUTTON */}
-
-            <nav className="nav">
+            {/* DESKTOP NAV */}
+            <nav className="nav desktop-nav">
               <a
                 href="https://moonierocket.com/tools"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="header-cta"
               >
-                Try It <br/> Now
+                Try It <br /> Now
               </a>
 
               <a
@@ -60,13 +52,37 @@ export default function RootLayout({
                 rel="noopener noreferrer"
                 className="header-cta"
               >
-                Join the <br/> Community
+                Join the <br /> Community
               </a>
             </nav>
 
+            {/* MOBILE MENU BUTTON (no onClick) */}
+            <label htmlFor="nav-toggle" className="mobile-menu-btn">
+              ☰
+            </label>
+          </div>
+
+          {/* MOBILE DROPDOWN */}
+          <div className="mobile-menu">
+            <a
+              href="https://moonierocket.com/tools"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-link"
+            >
+              Try It Now
+            </a>
+
+            <a
+              href="https://t.me/moonierocket"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-link"
+            >
+              Join the Community
+            </a>
           </div>
         </header>
-
 
         {children}
       </body>

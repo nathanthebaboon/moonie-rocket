@@ -326,15 +326,18 @@ a:hover {
 }
 
 /* ---------- HEADER: MOBILE ADJUSTMENTS ---------- */
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .header-inner {
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   /* left + right */
     padding: 0.5rem 1rem;
     gap: 0.5rem;
   }
 
   .header-left {
     gap: 0.4rem;
+    margin-right: auto;               /* push logo to the left */
   }
 
   .logo {
@@ -347,26 +350,71 @@ a:hover {
     line-height: 1.1rem;
   }
 
+  /* hide desktop CTAs on mobile */
   .header-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 0.8rem;      /* text size */
-    letter-spacing: -0.035em; /* spacing between letters */
-    line-height: 1.2;         /* height of the text line */
-
-    padding: 0.4rem 0.8rem;
-    border-radius: 9999px;
-
-    background-color: #0f184a;
-    color: #ffffff;
-    border: 3px solid #14236d;
-
+    display: none;
   }
+
+  /* we don't need to center .nav anymore */
   .nav {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  /* make sure burger sits on the right */
+  .mobile-menu-btn {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+input.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.mobile-menu-btn {
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 2px;   /* spreads the lines a bit */
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  color: #0f184a;
+  border-radius: 9999px;
+  border: transparent;
+  padding: 0.4rem 0.7rem;
+}
+
+.mobile-menu {
+  display: none !important;
+  background: #0f184a;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1.25rem;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-link {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* show menu only when checkbox is checked */
+#nav-toggle:checked ~ .mobile-menu {
+  display: flex !important;
+}
+
+@media (max-width: 720px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
   }
 }
 
@@ -426,7 +474,7 @@ a:hover {
 }
 
 .poster-line + .poster-line {
-  margin-top: -0.4rem !important;
+  margin-top: 0rem !important;
 }
 
 @media (min-width: 768px) {
@@ -471,7 +519,7 @@ a:hover {
   font-weight: 900;
   text-transform: uppercase;
   color: #ffe9a8;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 0.9;
   margin-bottom: 2rem;
 }
