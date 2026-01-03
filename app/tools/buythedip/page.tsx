@@ -9,7 +9,8 @@ export default function ToolsPage() {
             <iframe
               src="https://moonie-tool-buythedip-production-875a.up.railway.app/"
               className="w-full border-0"
-              style={{ minHeight: "1300px" }} // bump if your app needs more
+              // use a *fixed*, generous height so the inner page doesn’t need its own scroll
+              style={{ height: "2000px" }}
               loading="lazy"
               title="Buy the Dip Backtester"
             />
