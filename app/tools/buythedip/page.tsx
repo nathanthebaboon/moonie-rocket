@@ -1,16 +1,20 @@
 "use client";
 
-export default function BuyTheDipPage() {
+export default function ToolsPage() {
   return (
-    <main className="min-h-screen bg-[#020817] py-12">
-      <div className="w-full max-w-3xl mx-auto">
-        <div className="w-full">
-          <iframe
-            src="https://moonie-tool-buythedip-production-875a.up.railway.app/"
-            className="w-full min-h-[900px] border-0"
-            loading="lazy"
-            title="Buy the Dip Backtester"
-          />
+    <main className="bg-[#020817] min-h-screen">
+      <div className="flex justify-center py-10">
+        {/* Width-limited, centered container */}
+        <div className="w-full max-w-5xl px-4">
+          <div className="rounded-2xl bg-[#020817] shadow-lg overflow-hidden">
+            <iframe
+              src="https://moonie-tool-buythedip-production-875a.up.railway.app/"
+              className="w-full border-0"
+              style={{ minHeight: "1200px" }} // tweak: 1000–1200px if needed
+              loading="lazy"
+              title="Buy the Dip Backtester"
+            />
+          </div>
         </div>
       </div>
     </main>
