@@ -136,15 +136,26 @@ export default function HomePage() {
         <p className="cta-title">
           Coming Soon
         </p>
+        <div className="cta-row">
+          <a
+            href="https://moonierocket.com/tools"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button"
+          >
+            Try It <br/> Now
+          </a>
 
-        <a
-          href="https://t.me/moonierocket"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cta-button"
-        >
-          Get Early <br/> Access
-        </a>
+          <a
+            href="https://t.me/moonierocket"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button"
+          >
+            Join the <br/> Community
+          </a>
+        </div>
+
       </section>
     </main>
   );

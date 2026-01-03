@@ -43,14 +43,24 @@ export default function RootLayout({
             </Link>
 
             {/* CTA BUTTON */}
+
             <nav className="nav">
+              <a
+                href="https://moonierocket.com/tools"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="header-cta"
+              >
+                Try It <br/> Now
+              </a>
+
               <a
                 href="https://t.me/moonierocket"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="header-cta"
               >
-                Get Early <br/> Access
+                Join the <br/> Community
               </a>
             </nav>
 
