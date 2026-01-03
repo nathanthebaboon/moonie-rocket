@@ -7,6 +7,7 @@ type AppConfig = {
   title: string;
   description: string;
   image: string;
+  subtitle?: string;     
   url: string;
   cta?: string;
 };
