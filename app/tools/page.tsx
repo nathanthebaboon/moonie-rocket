@@ -6,14 +6,14 @@ import Image from "next/image";
 type AppConfig = {
   title: string;
   description: string;
-  image: string;
-  subtitle?: string;     
+  image: string;  
   url: string;
   cta?: string;
 };
 
 type SectionConfig = {
   name: string;
+  subtitle?: string;   
   apps: AppConfig[];
 };
 
