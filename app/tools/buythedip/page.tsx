@@ -2,8 +2,8 @@
 
 export default function BuyTheDipPage() {
   return (
-    <main className="min-h-screen bg-[#020817] py-10">
-      <div className="w-full max-w-5xl mx-auto">
+    <main className="min-h-screen bg-[#020817] py-12">
+      <div className="w-full max-w-3xl mx-auto">
         <div className="w-full">
           <iframe
             src="https://moonie-tool-buythedip-production-875a.up.railway.app/"
