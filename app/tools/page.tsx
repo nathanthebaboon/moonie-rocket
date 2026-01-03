@@ -87,18 +87,14 @@ export default function ToolsPage() {
   };
 
   return (
-    <main className="scroll-snap-container tools-main">
+    <main className="tools-main min-h-screen pb-16">
       <div className="tools-inner">
-
-        {/* SECTIONS */}
         {SECTIONS.map((section) => (
           <section key={section.name} className="tools-section">
             <h2 className="tools-section-title">{section.name}</h2>
-                {section.subtitle && (
-                <p className="tools-section-subtitle">
-                    {section.subtitle}
-                </p>
-                )}
+            {section.subtitle && (
+              <p className="tools-section-subtitle">{section.subtitle}</p>
+            )}
             <div className="tools-grid">
               {section.apps.map((app) => (
                 <article
@@ -115,11 +111,12 @@ export default function ToolsPage() {
                       className="tools-thumb-img"
                     />
                   </div>
-
                   <div className="tools-card-body">
                     <h3 className="tools-card-title">{app.title}</h3>
                     <p className="tools-card-desc">{app.description}</p>
-                    <span className="tools-card-cta">{app.cta ?? "Try It Now ↗"}</span>
+                    <span className="tools-card-cta">
+                      {app.cta ?? "Try It Now ↗"}
+                    </span>
                   </div>
                 </article>
               ))}
