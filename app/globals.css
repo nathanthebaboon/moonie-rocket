@@ -619,6 +619,12 @@ input.nav-toggle {
   margin: 0 0 0.8rem;
 }
 
+/* Remove the extra blue bar above the first heading on the tools page */
+.tools-main h1:first-of-type {
+  margin-top: 0;
+  padding-top: 0.25rem; /* tweak or remove if you want it tighter */
+}
+
 /* Sections */
 .tools-section {
   margin-top: 5rem;
