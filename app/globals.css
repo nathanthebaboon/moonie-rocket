@@ -390,9 +390,10 @@ input.nav-toggle {
 
 .mobile-menu {
   display: none !important;
-  background: #0f184a;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 0.75rem 1.25rem;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border-top: none;
   flex-direction: column;
   gap: 0.75rem;
 }
@@ -406,6 +407,9 @@ input.nav-toggle {
 /* show menu only when checkbox is checked */
 #nav-toggle:checked ~ .mobile-menu {
   display: flex !important;
+  padding: 0.75rem 1.25rem;
+  background: #0f184a; /* the dark blue you want for the dropdown */
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 720px) {
