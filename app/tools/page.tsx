@@ -8,6 +8,7 @@ type AppConfig = {
   description: string;
   image: string;
   url: string;
+  cta?: string;
 };
 
 type SectionConfig = {
