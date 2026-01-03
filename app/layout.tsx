@@ -50,7 +50,7 @@ export default function RootLayout({
                 rel="noopener noreferrer"
                 className="header-cta"
               >
-                Be a <br/> Tester
+                Get Early <br/> Access
               </a>
             </nav>
 

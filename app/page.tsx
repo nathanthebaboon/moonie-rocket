@@ -143,7 +143,7 @@ export default function HomePage() {
           rel="noopener noreferrer"
           className="cta-button"
         >
-          Be a <br/> Tester
+          Get Early <br/> Access
         </a>
       </section>
     </main>
