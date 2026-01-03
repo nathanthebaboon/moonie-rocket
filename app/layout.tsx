@@ -26,13 +26,20 @@ export default function RootLayout({
           <div className="header-inner">
 
             {/* CLICKABLE LOGO + BRAND */}
-            <Link href="/" className="header-left">
+            <Link
+              href="https://www.moonierocket.com"
+              className="header-left"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="/moonie/logo.png"
                 alt="Moonie Rocket"
                 className="logo"
               />
-              <span className="brand">MOONIE <br/> ROCKET</span>
+              <span className="brand">
+                MOONIE <br /> ROCKET
+              </span>
             </Link>
 
             {/* CTA BUTTON */}
