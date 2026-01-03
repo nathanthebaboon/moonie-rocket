@@ -1,8 +1,67 @@
 // app/page.tsx
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
+  // JS-based snapping between .section blocks
+  useEffect(() => {
+    const sections = Array.from(
+      document.querySelectorAll<HTMLElement>(".section")
+    );
+    if (!sections.length) return;
+
+    const header = document.querySelector<HTMLElement>(".site-header");
+    const headerHeight = header?.offsetHeight ?? 0;
+
+    let currentIndex = 0;
+    let isSnapping = false;
+
+    const goToIndex = (index: number) => {
+      if (index < 0 || index >= sections.length) return;
+
+      isSnapping = true;
+      currentIndex = index;
+
+      const target = sections[index].offsetTop - headerHeight;
+
+      window.scrollTo({
+        top: target,
+        behavior: "smooth",
+      });
+
+      // unlock after animation finishes
+      setTimeout(() => {
+        isSnapping = false;
+      }, 450);
+    };
+
+    const handleWheel = (e: WheelEvent) => {
+      if (isSnapping) return;
+
+      e.preventDefault(); // stop natural scrolling entirely
+
+      if (e.deltaY > 0 && currentIndex < sections.length - 1) {
+        goToIndex(currentIndex + 1);
+      } else if (e.deltaY < 0 && currentIndex > 0) {
+        goToIndex(currentIndex - 1);
+      }
+    };
+
+    // initialize position
+    goToIndex(0);
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
+
+
   return (
     <main className="scroll-snap-container bg-[#1a2043] text-[#ffe9a8]">
       {/* SECTION 1: FLY TO THE MOON */}
@@ -194,3 +253,4 @@ function TitleBlock({ titleLines }: { titleLines: string[] }) {
     </div>
   );
 }
+

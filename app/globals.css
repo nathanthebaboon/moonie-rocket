@@ -45,9 +45,9 @@ body {
 
 /* 👇 Make the viewport the scroll snap container */
 html {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   /* optional: adjust if your sticky header overlaps sections */
-  scroll-padding-top: 0;
+  /* scroll-padding-top: 0; */
 }
 
 /* ----------------------------------
@@ -59,6 +59,7 @@ body {
   font-family: "Bernoru", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 80px;  
 }
 
 /* ----------------------------------
@@ -130,8 +131,8 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;   
+  /* scroll-snap-align: start; */
+  /* scroll-snap-stop: always; */  
 }
 
 .section-inner {
@@ -229,8 +230,10 @@ a:hover {
    HEADER
 ---------------------------------- */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   background-color: #e6b44c;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
