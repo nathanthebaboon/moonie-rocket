@@ -10,7 +10,7 @@ export default function ToolsPage() {
               src="https://moonie-tool-buythedip-production-875a.up.railway.app/"
               className="w-full border-0"
               // use a *fixed*, generous height so the inner page doesn’t need its own scroll
-              style={{ height: "2000px" }}
+              style={{ height: "2500px" }}
               loading="lazy"
               title="Buy the Dip Backtester"
             />
